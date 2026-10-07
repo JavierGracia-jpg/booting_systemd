@@ -1,0 +1,11 @@
+[Unit]
+Description=Print Hello ASCII at boot
+After=multi-user.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/hello-ascii.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
